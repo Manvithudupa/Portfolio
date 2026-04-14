@@ -5,54 +5,31 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 240 10% 2%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 4%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 4%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 142 70% 50%;
-    --primary-foreground: 142 70% 5%;
-    --secondary: 240 3.7% 10%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 10%;
-    --muted-foreground: 240 5% 65%;
-    --accent: 142 70% 50%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 12%;
-    --input: 240 3.7% 12%;
-    --ring: 142 70% 50%;
-    --radius: 0.5rem;
+:root,
+.dark {
+  --background: 240 10% 2%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 4%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 4%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 142 70% 50%;
+  --primary-foreground: 142 70% 5%;
+  --secondary: 240 3.7% 10%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 10%;
+  --muted-foreground: 240 5% 65%;
+  --accent: 142 70% 50%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 12%;
+  --input: 240 3.7% 12%;
+  --ring: 142 70% 50%;
+  --radius: 0.5rem;
 
-    --font-sans: 'DM Sans', sans-serif;
-    --font-mono: 'IBM Plex Mono', monospace;
-  }
-
-  .dark {
-    --background: 240 10% 2%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 4%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 4%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 142 70% 50%;
-    --primary-foreground: 142 70% 5%;
-    --secondary: 240 3.7% 10%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 10%;
-    --muted-foreground: 240 5% 65%;
-    --accent: 142 70% 50%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 12%;
-    --input: 240 3.7% 12%;
-    --ring: 142 70% 50%;
-  }
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
 }
 
 @layer base {
