@@ -4,8 +4,8 @@ import { Send, Mail, Github, Linkedin, MessageSquare, ExternalLink, CheckCircle,
 import emailjs from '@emailjs/browser'
 
 // EmailJS configuration — set these in your .env file (see .env.example)
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_portfolio'
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_contact'
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_52o1yo9'
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_adjp96i'
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || ''
 
 export function Contact() {
