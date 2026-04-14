@@ -16,9 +16,9 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const mailtoBody = `Name: ${formData.name}%0AEmail: ${formData.email}%0A%0A${encodeURIComponent(formData.message)}`
+    const mailtoBody = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)
     const mailtoSubject = encodeURIComponent(formData.subject || 'Contact from Portfolio')
-    window.open(`mailto:manvithudupa073@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`, '_self')
+    window.location.href = `mailto:manvithudupa073@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`
   }
 
   return (
