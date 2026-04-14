@@ -75,7 +75,7 @@ export function Skills() {
                     transition={{ delay: catIdx * 0.1 + i * 0.05 }}
                     className="flex items-center gap-3 p-3 rounded-xl bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-all group"
                   >
-                    <img src={skill.icon} alt={skill.name} className="w-6 h-6" loading="lazy" />
+                    <img src={skill.icon} alt="" className="w-6 h-6" loading="lazy" />
                     <span className="font-mono font-medium text-foreground group-hover:text-primary transition-colors tracking-wide">
                       {skill.name}
                     </span>

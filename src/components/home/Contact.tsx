@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 import { Send, Mail, Github, Linkedin, MessageSquare, ExternalLink, CheckCircle, AlertCircle } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 
-// EmailJS configuration — replace these with your actual IDs from https://www.emailjs.com/
-const EMAILJS_SERVICE_ID = 'service_portfolio'
-const EMAILJS_TEMPLATE_ID = 'template_contact'
-const EMAILJS_PUBLIC_KEY = 'YOUR_EMAILJS_PUBLIC_KEY'
+// EmailJS configuration — set these in your .env file (see .env.example)
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_portfolio'
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_contact'
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || ''
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -40,7 +40,8 @@ export function Contact() {
         setFormData({ name: '', email: '', subject: '', message: '' })
         setTimeout(() => setStatus('idle'), 5000)
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error('EmailJS error:', error)
         setStatus('error')
         setTimeout(() => setStatus('idle'), 5000)
       })
