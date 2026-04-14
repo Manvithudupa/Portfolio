@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ExternalLink, Github, Code2, ShieldCheck, Database, Layout, Gamepad2 } from 'lucide-react'
-import { Card, Badge, Button } from '@blinkdotnew/ui'
 
 const projects = [
   {
@@ -70,9 +69,9 @@ export function Projects() {
             </p>
           </div>
           <a href="https://github.com/Manvith911" target="_blank" rel="noreferrer">
-            <Button variant="outline" className="rounded-full border-primary/20 hover:border-primary/50 text-sm h-12">
+            <span className="inline-flex items-center justify-center rounded-full border border-primary/20 hover:border-primary/50 text-sm h-12 px-6 text-foreground hover:text-primary transition-colors">
               View All on GitHub
-            </Button>
+            </span>
           </a>
         </div>
 
@@ -86,7 +85,7 @@ export function Projects() {
               transition={{ delay: i * 0.1 }}
               className="group"
             >
-              <Card className="bg-background/40 border-border/50 hover:border-primary/30 transition-all duration-500 overflow-hidden relative backdrop-blur-sm group-hover:shadow-2xl group-hover:shadow-primary/5">
+              <div className="bg-background/40 border border-border/50 hover:border-primary/30 transition-all duration-500 overflow-hidden relative backdrop-blur-sm group-hover:shadow-2xl group-hover:shadow-primary/5 rounded-xl">
                 <div className="aspect-video relative overflow-hidden">
                   <img
                     src={project.image}
@@ -95,17 +94,15 @@ export function Projects() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                    <Badge variant="secondary" className="bg-primary/10 border-primary/20 text-primary uppercase text-[10px] tracking-widest font-bold">
+                    <span className="inline-flex items-center bg-primary/10 border border-primary/20 text-primary uppercase text-[10px] tracking-widest font-bold px-2.5 py-0.5 rounded-md">
                       {project.type}
-                    </Badge>
+                    </span>
                     <div className="flex gap-2 items-center">
                       {project.stars > 0 && (
                         <span className="text-xs font-mono text-primary/80 mr-1">★ {project.stars}</span>
                       )}
-                      <a href={project.github} target="_blank" rel="noreferrer">
-                        <Button size="icon" variant="outline" className="w-8 h-8 rounded-full border-white/10 hover:border-primary bg-black/40">
-                          <Github className="w-4 h-4" />
-                        </Button>
+                      <a href={project.github} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-white/10 hover:border-primary bg-black/40 text-foreground hover:text-primary transition-colors">
+                        <Github className="w-4 h-4" />
                       </a>
                     </div>
                   </div>
@@ -131,7 +128,7 @@ export function Projects() {
                     ))}
                   </div>
                 </div>
-              </Card>
+              </div>
             </motion.div>
           ))}
         </div>

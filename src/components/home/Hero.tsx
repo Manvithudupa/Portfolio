@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Terminal, Shield, Cpu, Code2, Globe } from 'lucide-react'
-import { Button } from '@blinkdotnew/ui'
 
 const features = [
   { icon: Shield, label: 'Cyber Security' },
@@ -48,16 +47,15 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-4 mb-12">
-            <Button size="lg" className="rounded-full h-12 px-8 font-bold tracking-wide">
+            <a href="#projects" className="inline-flex items-center justify-center rounded-full h-12 px-8 font-bold tracking-wide bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">
               View Projects
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-full h-12 px-8 font-bold tracking-wide border-primary/20 hover:border-primary/50"
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center rounded-full h-12 px-8 font-bold tracking-wide border border-primary/20 hover:border-primary/50 text-foreground hover:text-primary transition-colors"
             >
-              Resume
-            </Button>
+              Get In Touch
+            </a>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -78,7 +76,7 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* Right 3D Visual placeholder (animated SVG for now, or R3F integration if needed) */}
+        {/* Right 3D Visual placeholder */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
