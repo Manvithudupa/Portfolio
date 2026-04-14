@@ -31,10 +31,14 @@ export function About() {
             <div className="aspect-square relative max-w-md mx-auto">
               <div className="absolute inset-0 border-2 border-primary/20 rounded-3xl rotate-6 animate-pulse" />
               <div className="absolute inset-0 border-2 border-primary/40 rounded-3xl -rotate-3 transition-transform hover:rotate-0 duration-500" />
-              <div className="relative h-full w-full bg-[#0a0a0a] rounded-3xl border border-primary/30 flex items-center justify-center p-8 overflow-hidden group">
-                <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors" />
-                <div className="relative z-10 text-center">
-                  <Cpu className="w-20 h-20 text-primary mx-auto mb-6 opacity-80" />
+              <div className="relative h-full w-full rounded-3xl border border-primary/30 overflow-hidden group">
+                <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors z-10" />
+                <img
+                  src="https://github.com/user-attachments/assets/ca2799e1-e3c2-467e-9639-9a02425905f4"
+                  alt="Manvith Udupa"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-8 z-10">
                   <h3 className="text-3xl font-bold font-mono text-primary mb-2 glow-green tracking-tighter">
                     Manvith Udupa
                   </h3>
@@ -59,7 +63,7 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <motion.h2 className="text-4xl md:text-5xl font-bold font-mono glow-green mb-8 tracking-tight">
+            <motion.h2 className="text-4xl md:text-5xl font-bold font-mono text-primary glow-green mb-8 tracking-tight">
               A Bit About <span className="text-primary">Me</span>
             </motion.h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">

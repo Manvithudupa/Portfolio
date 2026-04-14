@@ -14,7 +14,7 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <motion.h2 className="text-4xl md:text-5xl font-bold font-mono glow-green mb-8 tracking-tight">
+            <motion.h2 className="text-4xl md:text-5xl font-bold font-mono text-primary glow-green mb-8 tracking-tight">
               Get In <span className="text-primary">Touch</span>
             </motion.h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-12">
@@ -40,7 +40,7 @@ export function Contact() {
                 <div>
                   <div className="text-sm text-muted-foreground font-mono uppercase tracking-widest font-bold">Social</div>
                   <div className="flex gap-4 mt-2">
-                    <a href="https://github.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    <a href="https://github.com/Manvith911" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                       <Github className="w-5 h-5" />
                     </a>
                     <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
