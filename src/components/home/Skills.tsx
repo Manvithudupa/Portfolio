@@ -5,32 +5,32 @@ const skillCategories = [
   {
     title: 'Frontend',
     skills: [
-      { name: 'JavaScript', icon: '🟨' },
-      { name: 'TypeScript', icon: '🔷' },
-      { name: 'React', icon: '⚛️' },
-      { name: 'Next.js', icon: '▲' },
-      { name: 'HTML', icon: '🌐' },
-      { name: 'CSS', icon: '🎨' },
-      { name: 'Tailwind CSS', icon: '💨' },
+      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+      { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+      { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+      { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+      { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+      { name: 'Tailwind CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
     ],
   },
   {
     title: 'Backend & Database',
     skills: [
-      { name: 'Node.js', icon: '🟩' },
-      { name: 'Supabase', icon: '⚡' },
-      { name: 'REST APIs', icon: '🔗' },
-      { name: 'PostgreSQL', icon: '🐘' },
+      { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+      { name: 'Supabase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg' },
+      { name: 'REST APIs', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg' },
+      { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
     ],
   },
   {
     title: 'Tools & Platforms',
     skills: [
-      { name: 'Git', icon: '🔀' },
-      { name: 'GitHub', icon: '🐙' },
-      { name: 'Vite', icon: '⚡' },
-      { name: 'Vercel', icon: '▲' },
-      { name: 'VS Code', icon: '💻' },
+      { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+      { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
+      { name: 'Vite', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' },
+      { name: 'Vercel', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg' },
+      { name: 'VS Code', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
     ],
   },
 ]
@@ -75,7 +75,7 @@ export function Skills() {
                     transition={{ delay: catIdx * 0.1 + i * 0.05 }}
                     className="flex items-center gap-3 p-3 rounded-xl bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-all group"
                   >
-                    <span className="text-lg">{skill.icon}</span>
+                    <img src={skill.icon} alt="" className="w-6 h-6" loading="lazy" />
                     <span className="font-mono font-medium text-foreground group-hover:text-primary transition-colors tracking-wide">
                       {skill.name}
                     </span>

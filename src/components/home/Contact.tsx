@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Send, Mail, Github, Linkedin, MessageSquare, ExternalLink } from 'lucide-react'
+import { Send, Mail, Github, Linkedin, MessageSquare, ExternalLink, CheckCircle, AlertCircle } from 'lucide-react'
+import emailjs from '@emailjs/browser'
+
+// EmailJS configuration — set these in your .env file (see .env.example)
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_portfolio'
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_contact'
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || ''
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -9,6 +15,7 @@ export function Contact() {
     subject: '',
     message: '',
   })
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
@@ -16,9 +23,28 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const mailtoBody = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)
-    const mailtoSubject = encodeURIComponent(formData.subject || 'Contact from Portfolio')
-    window.location.href = `mailto:manvithudupa073@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`
+    setStatus('sending')
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject || 'Contact from Portfolio',
+      message: formData.message,
+      to_email: 'manvithudupa073@gmail.com',
+    }
+
+    emailjs
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
+      .then(() => {
+        setStatus('success')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+        setTimeout(() => setStatus('idle'), 5000)
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error)
+        setStatus('error')
+        setTimeout(() => setStatus('idle'), 5000)
+      })
   }
 
   return (
@@ -128,10 +154,24 @@ export function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full rounded-xl h-14 font-bold tracking-widest text-lg uppercase bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all inline-flex items-center justify-center gap-2 group"
+                  disabled={status === 'sending'}
+                  className="w-full rounded-xl h-14 font-bold tracking-widest text-lg uppercase bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all inline-flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Message <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  {status === 'sending' ? 'Sending...' : 'Send Message'}{' '}
+                  <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
+                {status === 'success' && (
+                  <div className="flex items-center gap-2 text-green-400 font-mono text-sm mt-3">
+                    <CheckCircle className="w-4 h-4" />
+                    Message sent successfully!
+                  </div>
+                )}
+                {status === 'error' && (
+                  <div className="flex items-center gap-2 text-red-400 font-mono text-sm mt-3">
+                    <AlertCircle className="w-4 h-4" />
+                    Failed to send. Please try again or email directly.
+                  </div>
+                )}
               </div>
             </form>
           </motion.div>
