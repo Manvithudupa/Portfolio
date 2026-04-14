@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Shield, Code, Cpu, Terminal, Zap, CheckCircle2 } from 'lucide-react'
-import { Card } from '@blinkdotnew/ui'
+import { Shield, Code, Cpu, Terminal, Zap } from 'lucide-react'
 
 const skills = [
   { name: 'Full Stack', icon: Code, color: 'text-primary' },
@@ -34,7 +33,7 @@ export function About() {
               <div className="relative h-full w-full rounded-3xl border border-primary/30 overflow-hidden group">
                 <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors z-10" />
                 <img
-                  src="https://github.com/user-attachments/assets/ca2799e1-e3c2-467e-9639-9a02425905f4"
+                  src="https://github.com/Manvith911.png"
                   alt="Manvith Udupa"
                   className="w-full h-full object-cover"
                 />
@@ -79,15 +78,15 @@ export function About() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {skills.map((skill, i) => (
-                <Card key={skill.name} className="p-5 bg-background/50 border-border/50 hover:border-primary/40 transition-all group backdrop-blur-sm">
+              {skills.map((skill) => (
+                <div key={skill.name} className="p-5 bg-background/50 border border-border/50 hover:border-primary/40 transition-all group backdrop-blur-sm rounded-xl">
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-lg bg-primary/5 group-hover:bg-primary/10 transition-colors border border-primary/10">
                       <skill.icon className={`w-6 h-6 ${skill.color}`} />
                     </div>
                     <span className="font-mono font-bold text-foreground uppercase tracking-wider">{skill.name}</span>
                   </div>
-                </Card>
+                </div>
               ))}
             </div>
           </motion.div>

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lora:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-@import '@blinkdotnew/ui/styles';
 
 @tailwind base;
 @tailwind components;
@@ -8,9 +7,9 @@
 :root,
 .dark {
   --background: 240 10% 2%;
-  --foreground: 0 0% 98%;
+  --foreground: 142 30% 90%;
   --card: 240 10% 4%;
-  --card-foreground: 0 0% 98%;
+  --card-foreground: 142 30% 90%;
   --popover: 240 10% 4%;
   --popover-foreground: 0 0% 98%;
   --primary: 142 70% 50%;

@@ -5,6 +5,7 @@ import { Navbar } from './components/layout/Navbar'
 import { Hero } from './components/home/Hero'
 import { About } from './components/home/About'
 import { Projects } from './components/home/Projects'
+import { Skills } from './components/home/Skills'
 import { Contact } from './components/home/Contact'
 import { Terminal } from 'lucide-react'
 
@@ -57,6 +58,7 @@ export default function App() {
           <Hero />
           <About />
           <Projects />
+          <Skills />
           <Contact />
 
           {/* Simple Footer */}
@@ -70,7 +72,7 @@ export default function App() {
                 © {new Date().getFullYear()} Manvith Udupa • All Rights Reserved
               </div>
               <div className="flex items-center gap-4 text-xs font-mono text-muted-foreground uppercase tracking-wider">
-                Built with <span className="text-primary hover:glow-green transition-all cursor-default">React Three Fiber</span> & <span className="text-primary hover:glow-green transition-all cursor-default">Blink</span>
+                Built with <span className="text-primary hover:glow-green transition-all cursor-default">React Three Fiber</span> & <span className="text-primary hover:glow-green transition-all cursor-default">Tailwind</span>
               </div>
             </div>
           </footer>
