@@ -33,7 +33,7 @@ export function About() {
               <div className="relative h-full w-full rounded-3xl border border-primary/30 overflow-hidden group">
                 <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors z-10" />
                 <img
-                  src="https://github.com/Manvith911.png"
+                  src="https://i.postimg.cc/PryvK0G1/Profilepic.png"
                   alt="Manvith Udupa"
                   className="w-full h-full object-cover"
                 />
