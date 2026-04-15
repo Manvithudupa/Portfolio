@@ -4,28 +4,6 @@ import { ExternalLink, Github, Code2, ShieldCheck, Database, Layout, Gamepad2 } 
 
 const projects = [
   {
-    title: 'AniTaro',
-    description: 'Clean & ad-free anime streaming website, offering a smooth watching experience. Has all the advanced features and functionalities.',
-    tech: ['TypeScript', 'React', 'Streaming', 'Anilist API'],
-    icon: Layout,
-    image: 'https://i.postimg.cc/8kh6fjt6/Anitaro.png',
-    type: 'Frontend/FullStack',
-    github: 'https://github.com/Manvith911/AniTaro',
-    stars: 9,
-    forks: 2,
-  },
-  {
-    title: 'Aniku',
-    description: 'Clean & ad-free anime streaming website with data fetched using Anilist & Hianime. Built for a smooth, interactive watching experience.',
-    tech: ['TypeScript', 'Anilist', 'Hianime', 'Scraper'],
-    icon: Database,
-    image: 'https://i.postimg.cc/Y0wLyHqj/Aniku.png',
-    type: 'Frontend/Scraper',
-    github: 'https://github.com/Manvith911/Aniku',
-    stars: 3,
-    forks: 1,
-  },
-  {
     title: 'Memory Card Game',
     description: 'An interactive memory card game built with TypeScript. Test your memory skills with a fun and engaging card-matching experience.',
     tech: ['TypeScript', 'React', 'Game Logic', 'CSS'],
@@ -34,17 +12,6 @@ const projects = [
     type: 'Game/Interactive',
     github: 'https://github.com/Manvith911/Memory-Card-Game',
     stars: 1,
-    forks: 0,
-  },
-  {
-    title: 'Kenjitsu',
-    description: 'This is an anime scraper that gets data from multiple sites like animepahe , kaido , hianime , anizone (Backend Scraper API).',
-    tech: ['TypeScript', 'HTML', 'Dockerfile'],
-    icon: Code2,
-    image: 'https://i.postimg.cc/VsxPpN8V/kenjitsu.png',
-    type: 'Backend/Data',
-    github: 'https://github.com/Manvith911/kenjitsu',
-    stars: 0,
     forks: 0,
   }
 ]
