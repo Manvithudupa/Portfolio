@@ -58,9 +58,6 @@ export function Navbar() {
             <a href="https://github.com/Manvith911" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary">
-              <Linkedin className="w-5 h-5" />
-            </a>
           </div>
         </div>
 
