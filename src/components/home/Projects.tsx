@@ -10,7 +10,7 @@ const projects = [
     icon: Gamepad2,
     image: 'https://images.unsplash.com/photo-1606167668584-78701c57f13d?q=80&w=2070&auto=format&fit=crop',
     type: 'Game/Interactive',
-    github: 'https://github.com/Manvith911/Memory-Card-Game',
+    github: 'https://github.com/Manvithudupa/Memory-Card-Game',
     stars: 1,
     forks: 0,
   }
@@ -35,7 +35,7 @@ export function Projects() {
               Each project represents a unique challenge and learning experience.
             </p>
           </div>
-          <a href="https://github.com/Manvith911" target="_blank" rel="noreferrer">
+          <a href="https://github.com/Manvithudupa" target="_blank" rel="noreferrer">
             <span className="inline-flex items-center justify-center rounded-full border border-primary/20 hover:border-primary/50 text-sm h-12 px-6 text-foreground hover:text-primary transition-colors">
               View All on GitHub
             </span>
