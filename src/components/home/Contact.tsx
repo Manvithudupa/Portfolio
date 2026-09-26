@@ -83,7 +83,7 @@ export function Contact() {
                 <div>
                   <div className="text-sm text-muted-foreground font-mono uppercase tracking-widest font-bold">Social</div>
                   <div className="flex gap-4 mt-2">
-                    <a href="https://github.com/Manvith911" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    <a href="https://github.com/Manvithudupa" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                       <Github className="w-5 h-5" />
                     </a>
                   </div>
