@@ -55,7 +55,7 @@ export function Navbar() {
             </motion.a>
           ))}
           <div className="flex items-center gap-4 ml-4 border-l border-border pl-6">
-            <a href="https://github.com/Manvith911" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary">
+            <a href="https://github.com/Manvithudupa" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary">
               <Github className="w-5 h-5" />
             </a>
           </div>
